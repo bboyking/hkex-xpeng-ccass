@@ -25,6 +25,17 @@ jobs:
       - name: Run Puppeteer scraper
         run: npm run scrape
 
+      - name: Save and upload debug page source
+        run: |
+          # 检查是否生成了文件
+          if [ -f "xpeng-ccass.html" ]; then
+            echo "✅ File generated, content preview:"
+            head -n 20 xpeng-ccass.html
+          else
+            echo "❌ xpeng-ccass.html was NOT generated!"
+          fi
+        # 注意：即使脚本失败，这一步也会运行
+
       - name: Upload HTML result
         uses: actions/upload-artifact@v4
         with:
