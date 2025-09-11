@@ -23,8 +23,9 @@ const OUT_FILE = 'xpeng-ccass.html';
   await page.waitForSelector('#txtStockName');
   await page.type('#txtStockName', STOCK_NAME, { delay: 50 });
 
-  // 3. 点击查询按钮
-  await page.click('input[type="submit"]');
+  // 3. 点击查询按钮（使用正确的 ID）
+  await page.waitForSelector('#btnSearch', { timeout: 15000 });
+  await page.click('#btnSearch');
 
   // 4. 等待结果出现
   await page.waitForSelector('.ccass-search-result', { timeout: 15000 });
