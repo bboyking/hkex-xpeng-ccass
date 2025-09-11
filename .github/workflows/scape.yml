@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+            ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -48,4 +50,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add xpeng-ccass.html
-          git diff --quiet --cached || (git commit -m "bot: update xpeng ccass html" && git push)
+          git commit -m "bot: update xpeng ccass html"
+          git push origin main
