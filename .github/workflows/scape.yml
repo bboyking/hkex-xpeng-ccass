@@ -1,0 +1,40 @@
+name: Scrape XPeng CCASS
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'  # UTC 00:00 = HKT 08:00
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-optional
+
+      - name: Run Puppeteer scraper
+        run: npm run scrape
+
+      - name: Upload HTML result
+        uses: actions/upload-artifact@v4
+        with:
+          name: xpeng-ccass-html
+          path: xpeng-ccass.html
+
+      - name: Commit & push result
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add xpeng-ccass.html
+          git diff --quiet --cached || (git commit -m "bot: update xpeng ccass html" && git push)

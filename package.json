@@ -1,0 +1,11 @@
+{
+  "name": "hkex-xpeng-ccass",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.10.2"
+  }
+}
