@@ -234,10 +234,10 @@ function __doPostBack(eventTarget, eventArgument) {
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7B2BBE2">
 </div>
-<input type="hidden" name="today" id="today" value="20250921">
+<input type="hidden" name="today" id="today" value="20250922">
 <input type="hidden" name="sortBy" id="sortBy" value="shareholding">
 <input type="hidden" name="sortDirection" id="sortDirection" value="desc">
-<input type="hidden" name="originalShareholdingDate" id="originalShareholdingDate" value="2025/09/20">
+<input type="hidden" name="originalShareholdingDate" id="originalShareholdingDate" value="2025/09/21">
 <input type="hidden" name="alertMsg" id="alertMsg">
 
 
@@ -257,7 +257,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <li class="filter__container-input searchDate">
 <div class="form-input-text">
 <label for="searchDate">Shareholding Date</label>
-<input name="txtShareholdingDate" type="text" value="2025/09/19" id="txtShareholdingDate" class="input-searchDate active" placeholder="yyyy/mm/dd" readonly="readonly" data-reset="2025/09/20">
+<input name="txtShareholdingDate" type="text" value="2025/09/20" id="txtShareholdingDate" class="input-searchDate active" placeholder="yyyy/mm/dd" readonly="readonly" data-reset="2025/09/21">
 </div>
 </li>
 <li class="filter__container-input searchStockCodeName searchStock_Code">
@@ -317,7 +317,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <div class="search-bar__selectedItem">
 <div class="search-bar__selectedItem-filter searchDate">
 <b>Shareholding Date: </b>
-2025/09/19
+2025/09/20
 </div>
 <div class="search-bar__selectedItem-filter searchStock">
 09868 <b>XPENG INC.</b>
@@ -6472,11 +6472,11 @@ Total number of Issued Shares/Warrants/Units
 hkexApp.tableUtils.enableTableScrolling();
 })(jQuery, window.hkexApp);
 
-var options = { MAX: new Date('2025/09/20') };
+var options = { MAX: new Date('2025/09/21') };
 if (checkShareholdingDate.toLowerCase() == "true") {
-options.MIN = new Date('2024/09/21')
+options.MIN = new Date('2024/09/22')
 }
-$('#txtShareholdingDate').data('options', options).attr('data-reset', '2025/09/20');
+$('#txtShareholdingDate').data('options', options).attr('data-reset', '2025/09/21');
 
 $('#pnlStockNameList .droplist-item').on('click', function (e) {
 var value = $(e.target).parent().attr('data-value');
@@ -6534,6 +6534,6 @@ $('body').on('fontSizeChange', function () {
 $('table.table.table-scroll').scrollableTable("forcerefresh");
 });
 </script>
-<script type="text/javascript" nonce="" src="/GN_gOnWw/74Zt5yn/SmJVnea/CG/DfwEb2k7/VmoyJ1wMBA/WwRXS/G5ZaxtAAQ?v=d67c6d3e-64f4-3f96-5575-b5258f2a173a" defer=""></script>
+<script type="text/javascript" nonce="" src="/4Eire5/I/5/lnskkDIIzd5o/LN7wbm7akiXO/X34nZCEC/Zi4U/aiFrfkRAAQ?v=cbaca665-8cc6-5b2c-4290-59bb20c117c6" defer=""></script>
 
 </body></html>
