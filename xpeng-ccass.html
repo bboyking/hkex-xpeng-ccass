@@ -234,10 +234,10 @@ function __doPostBack(eventTarget, eventArgument) {
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A7B2BBE2">
 </div>
-<input type="hidden" name="today" id="today" value="20251220">
+<input type="hidden" name="today" id="today" value="20251221">
 <input type="hidden" name="sortBy" id="sortBy" value="shareholding">
 <input type="hidden" name="sortDirection" id="sortDirection" value="desc">
-<input type="hidden" name="originalShareholdingDate" id="originalShareholdingDate" value="2025/12/19">
+<input type="hidden" name="originalShareholdingDate" id="originalShareholdingDate" value="2025/12/20">
 <input type="hidden" name="alertMsg" id="alertMsg">
 
 
@@ -257,7 +257,7 @@ function __doPostBack(eventTarget, eventArgument) {
 <li class="filter__container-input searchDate">
 <div class="form-input-text">
 <label for="searchDate">Shareholding Date</label>
-<input name="txtShareholdingDate" type="text" value="2025/12/19" id="txtShareholdingDate" class="input-searchDate active" placeholder="yyyy/mm/dd" readonly="readonly" data-reset="2025/12/19">
+<input name="txtShareholdingDate" type="text" value="2025/12/19" id="txtShareholdingDate" class="input-searchDate active" placeholder="yyyy/mm/dd" readonly="readonly" data-reset="2025/12/20">
 </div>
 </li>
 <li class="filter__container-input searchStockCodeName searchStock_Code">
@@ -6897,11 +6897,11 @@ Total number of Issued Shares/Warrants/Units
 hkexApp.tableUtils.enableTableScrolling();
 })(jQuery, window.hkexApp);
 
-var options = { MAX: new Date('2025/12/19') };
+var options = { MAX: new Date('2025/12/20') };
 if (checkShareholdingDate.toLowerCase() == "true") {
-options.MIN = new Date('2024/12/20')
+options.MIN = new Date('2024/12/21')
 }
-$('#txtShareholdingDate').data('options', options).attr('data-reset', '2025/12/19');
+$('#txtShareholdingDate').data('options', options).attr('data-reset', '2025/12/20');
 
 $('#pnlStockNameList .droplist-item').on('click', function (e) {
 var value = $(e.target).parent().attr('data-value');
@@ -6959,6 +6959,6 @@ $('body').on('fontSizeChange', function () {
 $('table.table.table-scroll').scrollableTable("forcerefresh");
 });
 </script>
-<script type="text/javascript" nonce="" src="/KCSrwduqWfeRz4e-u7A_9Dl4nhw/rczubSaYE5Yi/YzNOTgUaIQ4/Aix/ZKkwlZHpv?v=b2ea02c2-a95e-2a7d-8eb6-159cfe7717dc" defer=""></script>
+<script type="text/javascript" nonce="" src="/cJkI/GHDT/Td/N_Rq/mAbQ/zQ1uzVaDzO/ThIgP0sEBw/PQ/1qTWIgRlVw?v=0cdd0887-12ed-29ce-39d6-7357c7f7173e" defer=""></script>
 
 </body></html>
